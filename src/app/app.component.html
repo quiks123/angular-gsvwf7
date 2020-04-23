@@ -1,31 +1,15 @@
 <hello name="{{ name }}"></hello>
 <p>
-  Start editing to see some magic happen :)
-  
-  <br/>
-  {{ "Contoh" }}
-  <br/><br/>
-  25 + 25 = {{25+25}}
+	Start editing to see some magic happen :)
 
+
+	<br><a routerLink='/login'>Login</a><br/>
+  <br><a routerLink='/detail/3'>DETAIL</a>
+  <a routerLink='/detail'>DETAIL</a>
 </p>
 
-<ng-template
-  *ngIf="show;then showBlock; else notShowBlock">
-</ng-template>
+<router-outlet>
+</router-outlet>
 
-<ng-template #showBlock>
-  <p> ini Show Block </p>
-</ng-template>
-
-<ng-template #notShowBlock>
-  <p> ini not Show Block </p>
-</ng-template>
-
-<p>
-  <input [(ngModel)] = "a" type="text" /> *
-  <input [(ngModel)] = "b" type="text" /> =
-  <br/>{{a*b}}
-</p>
-
-<button (click)="KlikButton()">Tekan</button>
-{{Pesan}}
+<button (click)="LOGIN()">LOGIN</button>
+<button (click)="DETAIL()">DETAIL</button>
